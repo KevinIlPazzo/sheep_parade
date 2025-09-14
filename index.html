@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sheep Parade 2026 - Jubileumeditie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .logo p {
+            color: #ecf0f1;
+            font-style: italic;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #3498db;
+        }
+        
+        /* Main content */
+        main {
+            margin-top: 80px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 120px 0;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        
+        .hero .date-location {
+            font-size: 1.1rem;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        /* Home Section */
+        .home-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .stat h3 {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        
+        .stat p {
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            background: #f8f9fa;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #e74c3c;
+            transform: scale(1.05);
+        }
+        
+        .price {
+            font-size: 3rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .pricing-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .pricing-card li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Location Section */
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .location-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .location-stat {
+            text-align: center;
+            padding: 20px;
+            background: #3498db;
+            color: white;
+            border-radius: 10px;
+            flex: 1;
+        }
+        
+        .location-stat h4 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        /* Catalog Section */
+        .catalog {
+            background: #f8f9fa;
+        }
+        
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .catalog-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .catalog-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .catalog-year {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .catalog-content {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .catalog-placeholder {
+            height: 200px;
+            background: #ecf0f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            border-radius: 10px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .submit-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #c0392b;
+        }
+        
+        .contact-info {
+            padding: 40px;
+        }
+        
+        .contact-person {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            color: #3498db;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section p {
+            color: #bdc3c7;
+            margin-bottom: 10px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .location-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Sheep Parade 2026</h1>
+                    <p>Jubileumeditie</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#pricing">Formules</a></li>
+                        <li><a href="#location">Locatie</a></li>
+                        <li><a href="#catalog">Catalogus</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Jubileumeditie: de 5e Sheep Parade is hier!</h1>
+                <p class="subtitle">Een unieke kunstveiling voor het goede doel</p>
+                <p class="date-location">Zaterdag 7 februari 2026 | Squadra Abarth & Rally Collection, Lier</p>
+            </div>
+        </section>
+
+        <!-- Home Section -->
+        <section id="home">
+            <div class="container">
+                <div class="home-content">
+                    <p>Ronde Tafel 101 van Lier is trots om op zaterdag 7 februari 2026 voor de vijfde keer een unieke kunstveiling te organiseren. Deze jubileumeditie vindt plaats bij Squadra Abarth & Rally Collection te Lier, dat bekendstaat om zijn indrukwekkende collectie van meer dan 175 klassieke rallywagens. Een prachtige locatie die perfect past bij de exclusieve sfeer van deze avond.</p>
+                    
+                    <p>De Sheep Parade staat opnieuw onder de deskundige leiding van de gerenommeerde veilingmeester <strong>Peter Bernaerts</strong>. Samen met een nog aan te kondigen Bekende Vlaming zal hij de traditioneel gedecoreerde kunststoffen schapen, kunstwerken en unieke experiences per opbod veilen. Gevestigde kunstenaars en bekende Vlamingen hebben hun deelname al bevestigd, onder wie <strong>Kevin Langedijk</strong>, <strong>Liesbet Valgaeren</strong> en <strong>Pascale Naessens</strong>.</p>
+                    
+                    <p>Net als bij de vorige edities gaat de opbrengst naar het goede doel, ook dit jaar worden zorgvuldig geselecteerde lokale projecten in en rond Lier ondersteund.</p>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>€20.000</h3>
+                            <p>Opbrengst 4e editie (2022)</p>
+                        </div>
+                        <div class="stat">
+                            <h3>200</h3>
+                            <p>Aanwezigen vorige editie</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5e</h3>
+                            <p>Jubileumeditie</p>
+                        </div>
+                    </div>
+                    
+                    <p>In oktober 2022 vond de 4e editie plaats met 200 aanwezigen, onder het peterschap van <strong>Rik Verwaest</strong> werd maar liefst €20.000 ingezameld. De opbrengst is naar vier goede doelen gegaan: het <strong>Emma De Prince Fonds</strong>, <strong>We Love Mariefonds</strong>, <strong>Emiliushoeve</strong> en <strong>Villavip Berlaar</strong>.</p>
+                    
+                    <p><strong>Wil je erbij zijn en de unieke sfeer van deze kunstveiling zelf beleven? Of wil je als kunstenaar of sponsor bijdragen aan dit maatschappelijk geëngageerde event? Neem contact op met de leden van Ronde Tafel 101 Lier.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2>Formules</h2>
+                <div class="pricing-cards">
+                    <div class="pricing-card featured">
+                        <h3>Sponsor-Formule</h3>
+                        <div class="price">€1.250</div>
+                        <ul>
+                            <li>Tafel voor 6 personen binnen de Platinum-Zone</li>
+                            <li>Fingerfood en luxe walking dinner</li>
+                            <li>3 flessen Champagne</li>
+                            <li>Visibiliteit tijdens het event op de foto-wall bij ontvangst</li>
+                            <li>Visibiliteit op TV-schermen, Website, Uitnodigingen, Kunstcatalogus en Facebook-event</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Tafel-Formule</h3>
+                        <div class="price">€800</div>
+                        <ul>
+                            <li>Tafel voor 6 personen binnen de Gold-Zone</li>
+                            <li>Fingerfood en luxe walking dinner</li>
+                            <li>2 flessen Champagne</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Toegangskaart</h3>
+                        <div class="price">€30</div>
+                        <ul>
+                            <li>Toegang tot de Silver-Zone</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location">
+            <div class="container">
+                <h2>Locatie</h2>
+                <div class="location-content">
+                    <div>
+                        <h3>Squadra Abarth & Rally Collection</h3>
+                        <p>Squadra Abarth & Rally Collection is een museum dat de passie voor autosport tot leven brengt. Je vindt hier een indrukwekkende verzameling klassieke auto's, iconen uit de rallywereld en meesterwerken van Italiaanse designlegendes.</p>
+                        
+                        <p>Het is een eerbetoon aan Carlo Abarth, de man die zijn stempel drukte op de autosportgeschiedenis met zijn baanbrekende ontwerpen en onmiskenbare stijl. Van de abarth 595, die snelheid en charme combineert, tot de krachtige Abarth 131 rally, brengt onze collectie zijn nalatenschap in al zijn glorie tot leven.</p>
+                        
+                        <div class="location-stats">
+                            <div class="location-stat">
+                                <h4>175+</h4>
+                                <p>Klassieke voertuigen</p>
+                            </div>
+                            <div class="location-stat">
+                                <h4>Unieke</h4>
+                                <p>Rally collectie</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Hoewel Abarth de kern vormt van de collectie, biedt de Squadra Abarth & Rally Collection veel meer. Van Fiat en Simca tot Alfa Romeo en Porsche, het museum herbergt de grootste namen uit de automobiele wereld. Elk merk vertegenwoordigt een uniek hoofdstuk in de geschiedenis van autosport met innovatieve designs en specificaties.</p>
+                        
+                        <p>Met meer dan 175 voertuigen biedt het museum een ongeëvenaarde blik op de rijke geschiedenis van rallysport en autosport. Van de stoere Fiat Abarth 124 Rally tot de legendarische Lancia Delta Integrale, elk voertuig is met zorg gerestaureerd en herinnert aan de glorieuze prestaties op de racecircuits.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalog Section -->
+        <section id="catalog" class="catalog">
+            <div class="container">
+                <h2>Catalogus</h2>
+                <div class="catalog-grid">
+                    <div class="catalog-item">
+                        <div class="catalog-year">2018</div>
+                        <div class="catalog-content">
+                            <div class="catalog-placeholder">Catalogus 2018</div>
+                            <p>Eerste editie van de Sheep Parade</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-year">2022</div>
+                        <div class="catalog-content">
+                            <div class="catalog-placeholder">Catalogus 2022</div>
+                            <p>4e editie - €20.000 opbrengst</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item">
+                        <div class="catalog-year">2026</div>
+                        <div class="catalog-content">
+                            <div class="catalog-placeholder">Nog niet beschikbaar</div>
+                            <p>Jubileumeditie - 5e editie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Good Causes Section -->
+        <section id="causes">
+            <div class="container">
+                <h2>Goede Doelen</h2>
+                <div class="home-content">
+                    <p>Net als bij de vorige edities gaat de volledige opbrengst naar zorgvuldig geselecteerde lokale projecten in en rond Lier. De goede doelen voor 2026 worden binnenkort bekendgemaakt.</p>
+                    
+                    <h3>Vorige edities ondersteunden:</h3>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>Emma De Prince Fonds</h3>
+                            <p>2022 ontvanger</p>
+                        </div>
+                        <div class="stat">
+                            <h3>We Love Mariefonds</h3>
+                            <p>2022 ontvanger</p>
+                        </div>
+                        <div class="stat">
+                            <h3>Emiliushoeve</h3>
+                            <p>2022 ontvanger</p>
+                        </div>
+                        <div class="stat">
+                            <h3>Villavip Berlaar</h3>
+                            <p>2022 ontvanger</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Stel uw vraag:</h3>
+                        <p>Heeft u vragen over deelname, sponsoring of het evenement? Neem gerust contact met ons op.</p>
+                        
+                        <div class="contact-person">
+                            <h4>Sander Goossens</h4>
+                            <p><strong>Secretaris Ronde Tafel 101 Lier</strong></p>
+                            <p>📞 0478/24.01.65</p>
+                        </div>
+                    </div>
+                    <form class="contact-form" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Naam:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefoonnummer:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Mailadres:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Onderwerp:</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Vraag:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Verstuur</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sheep Parade 2026</h4>
+                    <p>Jubileumeditie - 5e editie</p>
+                    <p>Zaterdag 7 februari 2026</p>
+                    <p>Squadra Abarth & Rally Collection</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Sander Goossens</p>
+                    <p>Secretaris Ronde Tafel 101 Lier</p>
+                    <p>0478/24.01.65</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Goede Doelen</h4>
+                    <p>Lokale projecten in en rond Lier</p>
+                    <p>Info volgt binnenkort</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Sponsors</h4>
+                    <p>Interesse in sponsoring?</p>
+                    <p>Neem contact met ons op</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ronde Tafel 101 Lier. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Bedankt voor uw bericht! We nemen zo spoedig mogelijk contact met u op.');
+            event.target.reset();
+        }
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 62, 80, 0.95)';
+            } else {
+                header.style.background = '#2c3e50';
+            }
+        });
+    </script>
+</body>
+</html>
