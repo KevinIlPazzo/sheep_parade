@@ -19,13 +19,27 @@ const Header: React.FC = () => {
         justifyContent: 'space-between',
         alignItems: 'center'
       }}>
-        <h1 style={{
-          fontSize: '2rem',
-          fontWeight: 'bold',
-          margin: 0
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '1rem'
         }}>
-          Sheep Parade 2026
-        </h1>
+          <img 
+            src="/logo's/sheep_colored.png" 
+            alt="Sheep Parade Logo" 
+            style={{
+              height: '50px',
+              width: 'auto'
+            }}
+          />
+          <h1 style={{
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            margin: 0
+          }}>
+            Sheep Parade 2026
+          </h1>
+        </div>
         <nav>
           <ul style={{
             display: 'flex',

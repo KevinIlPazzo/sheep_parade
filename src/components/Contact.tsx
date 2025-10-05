@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
           gap: '3rem'
         }}>
           {/* Contact Form */}
-          <div>
+          {/* <div>
             <h3 style={{
               fontSize: '1.8rem',
               color: '#2c3e50',
@@ -218,7 +218,7 @@ const Contact: React.FC = () => {
                 Verstuur Bericht
               </button>
             </form>
-          </div>
+          </div> */}
           
           {/* Contact Information */}
           <div>
@@ -247,9 +247,21 @@ const Contact: React.FC = () => {
               <p style={{
                 fontSize: '1.1rem',
                 marginBottom: '0.5rem',
-                color: '#bdc3c7'
+                color: '#bdc3c7',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem'
               }}>
                 Secretaris Ronde Tafel 101 Lier
+                <img 
+                  src="/logo's/rt_symbol.png" 
+                  alt="Round Table Symbol" 
+                  style={{
+                    height: '20px',
+                    width: 'auto',
+                    opacity: '0.8'
+                  }}
+                />
               </p>
               <p style={{
                 fontSize: '1.2rem',

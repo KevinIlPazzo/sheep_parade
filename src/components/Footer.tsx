@@ -126,9 +126,20 @@ const Footer: React.FC = () => {
             <h3 style={{
               fontSize: '1.5rem',
               marginBottom: '1rem',
-              color: '#ecf0f1'
+              color: '#ecf0f1',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem'
             }}>
               Contact
+              <img 
+                src="/logo's/rt_symbol.png" 
+                alt="Round Table Symbol" 
+                style={{
+                  height: '30px',
+                  width: 'auto'
+                }}
+              />
             </h3>
             <div style={{
               backgroundColor: 'rgba(46, 204, 113, 0.2)',
@@ -147,9 +158,21 @@ const Footer: React.FC = () => {
               <p style={{
                 margin: '0 0 0.5rem 0',
                 fontSize: '0.9rem',
-                color: '#bdc3c7'
+                color: '#bdc3c7',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem'
               }}>
                 Secretaris Ronde Tafel 101 Lier
+                <img 
+                  src="/logo's/rt_symbol.png" 
+                  alt="Round Table Symbol" 
+                  style={{
+                    height: '20px',
+                    width: 'auto',
+                    opacity: '0.7'
+                  }}
+                />
               </p>
               <p style={{
                 margin: 0,

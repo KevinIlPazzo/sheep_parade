@@ -29,7 +29,8 @@ const Catalog: React.FC = () => {
             borderRadius: '15px',
             boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
             textAlign: 'center',
-            border: '2px solid #95a5a6'
+            border: '2px solid #95a5a6',
+            transition: 'transform 0.3s ease'
           }}>
             <div style={{
               fontSize: '3rem',
@@ -48,10 +49,31 @@ const Catalog: React.FC = () => {
             </h3>
             <p style={{
               color: '#7f8c8d',
-              fontSize: '1rem'
+              fontSize: '1rem',
+              marginBottom: '1.5rem'
             }}>
               Catalogus beschikbaar
             </p>
+            <a 
+              href="/catalogus/catalogus_2018.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                backgroundColor: '#95a5a6',
+                color: 'white',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '25px',
+                textDecoration: 'none',
+                fontSize: '0.9rem',
+                fontWeight: 'bold',
+                transition: 'background-color 0.3s ease'
+              }}
+              onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#7f8c8d'}
+              onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#95a5a6'}
+            >
+              📄 Catalogus bekijken
+            </a>
           </div>
 
           {/* 2022 Catalog */}
@@ -90,11 +112,32 @@ const Catalog: React.FC = () => {
               padding: '1rem',
               borderRadius: '10px',
               fontSize: '0.9rem',
-              color: '#27ae60'
+              color: '#27ae60',
+              marginBottom: '1.5rem'
             }}>
               <strong>€20.000 opgehaald!</strong><br />
               200 aanwezigen
             </div>
+            <a 
+              href="/catalogus/catalogus_2022.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                backgroundColor: '#3498db',
+                color: 'white',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '25px',
+                textDecoration: 'none',
+                fontSize: '0.9rem',
+                fontWeight: 'bold',
+                transition: 'background-color 0.3s ease'
+              }}
+              onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#2980b9'}
+              onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#3498db'}
+            >
+              📄 Catalogus bekijken
+            </a>
           </div>
 
           {/* 2026 Catalog */}
