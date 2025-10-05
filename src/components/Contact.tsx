@@ -254,7 +254,7 @@ const Contact: React.FC = () => {
               }}>
                 Secretaris Ronde Tafel 101 Lier
                 <img 
-                  src="/logo's/rt_symbol.png" 
+                  src="/logos/rt_symbol.png" 
                   alt="Round Table Symbol" 
                   style={{
                     height: '20px',

@@ -4,9 +4,25 @@ const Pricing: React.FC = () => {
   return (
     <section id="pricing" style={{
       padding: '4rem 2rem',
-      backgroundColor: '#f8f9fa'
+      backgroundColor: '#f8f9fa',
+      position: 'relative',
+      overflow: 'hidden'
     }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundImage: `url('/logo\'s/rt_symbol.png'), url('/logo\'s/sheep_colored.png')`,
+        backgroundPosition: 'right 15% top 10%, left 10% bottom 15%',
+        backgroundSize: '80px auto, 200px auto',
+        backgroundRepeat: 'no-repeat, no-repeat',
+        opacity: 0.15,
+        filter: 'grayscale(1)',
+        zIndex: 0
+      }} />
+      <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
         <h2 style={{
           fontSize: '2.5rem',
           textAlign: 'center',

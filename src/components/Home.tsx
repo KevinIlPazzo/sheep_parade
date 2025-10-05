@@ -6,9 +6,25 @@ const Home: React.FC = () => {
       background: 'linear-gradient(135deg, #1a365d 0%, #2d5a87 50%, #4a90a4 100%)',
       color: 'white',
       padding: '4rem 2rem',
-      textAlign: 'center'
+      textAlign: 'center',
+      position: 'relative',
+      overflow: 'hidden'
     }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundImage: `url('/logo\'s/sheep_colored.png')`,
+        backgroundPosition: 'right 15% center',
+        backgroundSize: '300px auto',
+        backgroundRepeat: 'no-repeat',
+        opacity: 0.12,
+        filter: 'grayscale(1) brightness(2)',
+        zIndex: 0
+      }} />
+      <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
         <h1 style={{
           fontSize: '3.5rem',
           fontWeight: 'bold',

@@ -18,10 +18,56 @@ const Location: React.FC = () => {
         
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
           gap: '3rem',
-          alignItems: 'center'
+          alignItems: 'flex-start'
         }}>
+          <div style={{
+            position: 'relative'
+          }}>
+            <img 
+              src="/picture_of_location.jpg" 
+              alt="Squadra Abarth & Rally Collection Location" 
+              style={{
+                width: '100%',
+                height: '400px',
+                objectFit: 'cover',
+                borderRadius: '15px',
+                boxShadow: '0 15px 40px rgba(0,0,0,0.2)',
+                marginBottom: '2rem',
+                transition: 'transform 0.3s ease'
+              }}
+              onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+              onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            />
+            <div style={{
+              position: 'absolute',
+              bottom: '2rem',
+              left: '1rem',
+              right: '1rem',
+              backgroundColor: 'rgba(0,0,0,0.7)',
+              color: 'white',
+              padding: '1rem',
+              borderRadius: '10px',
+              textAlign: 'center'
+            }}>
+              <h4 style={{ 
+                margin: '0 0 0.5rem 0', 
+                fontSize: '1.2rem',
+                fontWeight: 'bold' 
+              }}>
+                Squadra Abarth & Rally Collection
+              </h4>
+              <p style={{ 
+                margin: 0, 
+                fontSize: '0.9rem',
+                opacity: 0.9 
+              }}>
+                De perfecte locatie voor een exclusieve kunstveiling
+              </p>
+            </div>
+          </div>
+          
           <div>
             <h3 style={{
               fontSize: '2rem',

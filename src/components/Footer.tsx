@@ -133,7 +133,7 @@ const Footer: React.FC = () => {
             }}>
               Contact
               <img 
-                src="/logo's/rt_symbol.png" 
+                src="/logos/rt_symbol.png" 
                 alt="Round Table Symbol" 
                 style={{
                   height: '30px',
@@ -165,7 +165,7 @@ const Footer: React.FC = () => {
               }}>
                 Secretaris Ronde Tafel 101 Lier
                 <img 
-                  src="/logo's/rt_symbol.png" 
+                  src="/logos/rt_symbol.png" 
                   alt="Round Table Symbol" 
                   style={{
                     height: '20px',

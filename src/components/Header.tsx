@@ -25,7 +25,7 @@ const Header: React.FC = () => {
           gap: '1rem'
         }}>
           <img 
-            src="/logo's/sheep_colored.png" 
+            src="/logos/sheep_colored.png" 
             alt="Sheep Parade Logo" 
             style={{
               height: '50px',
