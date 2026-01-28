@@ -68,6 +68,46 @@
             color: #3498db;
         }
         
+        /* Sponsor Banner */
+        .sponsor-banner {
+            background: #fff;
+            padding: 30px 0;
+            border-bottom: 1px solid #e9ecef;
+            overflow: hidden;
+        }
+        
+        .sponsor-banner h4 {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        
+        .sponsor-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 0 20px;
+        }
+        
+        .sponsor-logos img {
+            max-height: 50px;
+            max-width: 120px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .sponsor-logos img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
         /* Main content */
         main {
             margin-top: 80px;
@@ -427,6 +467,31 @@
                 </div>
             </div>
         </section>
+
+        <!-- Sponsor Banner -->
+        <div class="sponsor-banner">
+            <div class="container">
+                <h4>Onze Sponsors</h4>
+                <div class="sponsor-logos">
+                    <img src="public/sponsors/Architecten atelier groot.png" alt="Architecten Atelier">
+                    <img src="public/sponsors/DAL.png" alt="DAL">
+                    <img src="public/sponsors/Delen Private Bank groot.png" alt="Delen Private Bank">
+                    <img src="public/sponsors/Dhulst'.png" alt="Dhulst">
+                    <img src="public/sponsors/Elcos.png" alt="Elcos">
+                    <img src="public/sponsors/F+R studio.png" alt="F+R Studio">
+                    <img src="public/sponsors/Fincraft.png" alt="Fincraft">
+                    <img src="public/sponsors/IVDB klein.png" alt="IVDB">
+                    <img src="public/sponsors/In den draaiboom.png" alt="In den Draaiboom">
+                    <img src="public/sponsors/Quorum.jpg" alt="Quorum">
+                    <img src="public/sponsors/Restaurant Antoine.jpg" alt="Restaurant Antoine">
+                    <img src="public/sponsors/TK Elevator.png" alt="TK Elevator">
+                    <img src="public/sponsors/Talent-IT.png" alt="Talent-IT">
+                    <img src="public/sponsors/Torenven.png" alt="Torenven">
+                    <img src="public/sponsors/Van Doosselaere & partners.jpg" alt="Van Doosselaere & Partners">
+                    <img src="public/sponsors/Van Uffelen klein.png" alt="Van Uffelen">
+                </div>
+            </div>
+        </div>
 
         <!-- Pricing Section -->
         <section id="pricing" class="pricing">

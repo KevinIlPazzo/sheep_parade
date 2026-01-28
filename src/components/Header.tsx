@@ -49,6 +49,8 @@ const Header: React.FC = () => {
             gap: '2rem'
           }}>
             <li><a href="#home" style={{ color: 'white', textDecoration: 'none' }}>Home</a></li>
+            <li><a href="#sponsors" style={{ color: 'white', textDecoration: 'none' }}>Sponsors</a></li>
+            <li><a href="#goede-doelen" style={{ color: 'white', textDecoration: 'none' }}>Goede Doelen</a></li>
             <li><a href="#pricing" style={{ color: 'white', textDecoration: 'none' }}>Formules</a></li>
             <li><a href="#location" style={{ color: 'white', textDecoration: 'none' }}>Locatie</a></li>
             <li><a href="#catalog" style={{ color: 'white', textDecoration: 'none' }}>Catalogus</a></li>

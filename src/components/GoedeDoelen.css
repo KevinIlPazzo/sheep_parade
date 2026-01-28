@@ -1,0 +1,47 @@
+.goede-doelen {
+  background: #f8f9fa;
+  padding: 80px 0;
+}
+
+.goede-doelen h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.goede-doelen .intro {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.causes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.cause-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.cause-card:hover {
+  transform: translateY(-5px);
+}
+
+.cause-card h3 {
+  color: #e74c3c;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.cause-card p {
+  color: #666;
+  line-height: 1.7;
+  text-align: left;
+}

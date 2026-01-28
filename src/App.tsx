@@ -7,6 +7,8 @@ import Location from './components/Location.tsx';
 import Catalog from './components/Catalog.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
+import SponsorBanner from './components/SponsorBanner.tsx';
+import GoedeDoelen from './components/GoedeDoelen.tsx';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Header />
       <main>
         <Home />
+        <SponsorBanner />
+        <GoedeDoelen />
         <Pricing />
         <Location />
         <Catalog />
