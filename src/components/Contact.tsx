@@ -274,36 +274,6 @@ const Contact: React.FC = () => {
             </div>
             
             <div style={{
-              backgroundColor: '#f8f9fa',
-              padding: '2rem',
-              borderRadius: '15px',
-              boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-            }}>
-              <h4 style={{
-                fontSize: '1.3rem',
-                marginBottom: '1rem',
-                color: '#2c3e50'
-              }}>
-                Goede Doelen & Sponsors
-              </h4>
-              <p style={{
-                fontSize: '1rem',
-                lineHeight: '1.6',
-                color: '#555',
-                marginBottom: '1rem'
-              }}>
-                <strong>Goede doelen:</strong> Info volgt.
-              </p>
-              <p style={{
-                fontSize: '1rem',
-                lineHeight: '1.6',
-                color: '#555'
-              }}>
-                <strong>Sponsors:</strong> Info volgt.
-              </p>
-            </div>
-            
-            <div style={{
               backgroundColor: '#e8f6f3',
               padding: '1.5rem',
               borderRadius: '10px',
