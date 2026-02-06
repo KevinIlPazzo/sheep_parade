@@ -45,7 +45,7 @@ const Catalog: React.FC = () => {
               color: '#2c3e50',
               marginBottom: '1rem'
             }}>
-              1e Editie
+              3e Editie
             </h3>
             <p style={{
               color: '#7f8c8d',
@@ -181,11 +181,11 @@ const Catalog: React.FC = () => {
               5e Jubileumeditie
             </h3>
             <p style={{
-              color: '#e67e22',
+              color: '#7f8c8d',
               fontSize: '1rem',
-              fontWeight: 'bold'
+              marginBottom: '1.5rem'
             }}>
-              Nog niet beschikbaar
+              Catalogus beschikbaar
             </p>
             <div style={{
               backgroundColor: '#fef9e7',
@@ -193,11 +193,31 @@ const Catalog: React.FC = () => {
               borderRadius: '10px',
               fontSize: '0.9rem',
               color: '#f39c12',
-              marginTop: '1rem'
+              marginBottom: '1.5rem'
             }}>
               <strong>7 februari 2026</strong><br />
               Squadra Abarth & Rally Collection
             </div>
+            <a 
+              href="/catalogus/catalogus_2026.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                backgroundColor: '#f39c12',
+                color: 'white',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '25px',
+                textDecoration: 'none',
+                fontSize: '0.9rem',
+                fontWeight: 'bold',
+                transition: 'background-color 0.3s ease'
+              }}
+              onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#e67e22'}
+              onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#f39c12'}
+            >
+              📄 Catalogus bekijken
+            </a>
           </div>
         </div>
         

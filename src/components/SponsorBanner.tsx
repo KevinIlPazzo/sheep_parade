@@ -9,7 +9,7 @@ const sponsors = [
   { file: 'Delen Private Bank groot.png', alt: 'Delen Private Bank' },
   { file: "Dhulst'.png", alt: 'Dhulst' },
   { file: 'Elcos.png', alt: 'Elcos' },
-  { file: 'F+R studio.png', alt: 'F+R Studio' },
+  { file: 'F%2BR studio.png', alt: 'F+R Studio' },
   { file: 'Fincraft.png', alt: 'Fincraft' },
   { file: 'IVDB klein.png', alt: 'IVDB' },
   { file: 'In den draaiboom.png', alt: 'In den Draaiboom' },
